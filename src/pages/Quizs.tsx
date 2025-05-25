@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { CharacterImages } from "../components/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { randomNumber } from "../components/utils";
 import Home from "./Home";
 import Confetti from "react-confetti";
@@ -24,6 +24,10 @@ const Quizs = () => {
     CharacterImages[randomNumber(0, CharacterImages.length - 1)]
   );
 
+  useEffect(() => {
+    if (score >= 8 && !isPassed) setIsPassed(true);
+  }, [score, isPassed]);
+
   if (!location.state) return <Home />;
 
   const { quizs } = location.state;
@@ -43,7 +47,6 @@ const Quizs = () => {
 
       if (index >= quizs.length - 1) {
         setIsCompleted(true);
-        setIsPassed(() => (score >= 8 ? true : false));
       } else {
         setIndex(index + 1);
       }
@@ -52,7 +55,7 @@ const Quizs = () => {
   };
 
   return (
-    <div className="flex items-center justify-center grid grid-cols-1 md:grid-cols-2 md:gap-4 pt-10 m-10 md:m-20">
+    <div className="flex items-center justify-center grid grid-cols-1 md:grid-cols-2 md:gap-4 pt-6 md:pt-10 m-10 md:m-20">
       <div>
         <img
           style={{

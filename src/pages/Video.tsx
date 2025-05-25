@@ -30,6 +30,7 @@ const Video = () => {
       autoplay: 1,
       controls: 0,
       showinfo: 0,
+      playsinline: 1,
       modestbranding: 1,
       showRelatedVideos: false,
       rel: 0,

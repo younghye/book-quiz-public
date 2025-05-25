@@ -60,7 +60,7 @@ const Home = () => {
           }}
         ></div>
 
-        <div className="absolute top-[40vh] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+        <div className="absolute top-[40vh] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[70vw] md:w-[50vw] lg:w-[30vw]">
           <div className="text-3xl md:text-4xl lg:text-6xl font-bold">
             BOOK QUIZ
           </div>
