@@ -18,3 +18,18 @@
 
 #
 <img src="https://github.com/younghye/book-quiz/blob/master/public/assets/images/README/video.png"/>
+
+## Setup
+1. Clone this repository. <br />
+2. Create a Groq API key and update the variable of the API key in the ".env" file.
+3. If use a DockerFile <br />
+  docker build -t tagName:version .<br />
+  docker run -p 3000:3000 tagName:version
+
+## Demo
+https://kidbookquiz.netlify.app/<br /><br />
+This app is using free tier of Groq with rate limits. If the app exceeds day rate limits, you will not be able to use the app until next day. Sorry!
+
+
+
+
